@@ -21,8 +21,11 @@ int main(void)
 			continue;
 		putchar(first + '0');
 		putchar(last + '0');
-		putchar(',');
-		putchar(' ');
+		if (d < 89) 
+		{
+			putchar(',');
+			putchar(' ');
+		}
 	}
 	putchar('\n');
 	return (0);
