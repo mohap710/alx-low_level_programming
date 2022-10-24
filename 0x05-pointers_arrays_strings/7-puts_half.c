@@ -11,11 +11,11 @@ void puts_half(char *str)
 	int len = _strlen(str);
 
 	if (len % 2 == 1)
-	{	
-		half = (len - 1) / 2;
+	{
+		half = ((len - 1) / 2) + 1;
 	}
 	else
-	{	
+	{
 		half = len / 2;
 	}
 
