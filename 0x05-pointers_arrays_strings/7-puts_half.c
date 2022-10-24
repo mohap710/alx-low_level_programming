@@ -10,9 +10,14 @@ void puts_half(char *str)
 	int c, half;
 	int len = _strlen(str);
 
-	half = len / 2;
 	if (len % 2 == 1)
+	{	
 		half = (len - 1) / 2;
+	}
+	else
+	{	
+		half = len / 2;
+	}
 
 	for (c = half; str[c] != '\0'; c++)
 	{
