@@ -12,7 +12,7 @@ int main(int argc, __attribute__((unused)) char *argv[])
 {
 	int result = 0, i = 1;
 
-	if (argc == 1)
+	if (argc < 1)
 	{
 		printf("0\n");
 		return (0);
