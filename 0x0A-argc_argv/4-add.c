@@ -1,32 +1,29 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <ctype.h>
+#include "holberton.h"
 /**
- * main -add positive numbers passed in args
- * @argc: argument count
- * @argv: array of arguments
- * Return: 0 for success 1 for failure
+ * main - Entry Point
+ * @argc: arguments
+ * @argv: array pointing to arguments
+ * Return: 0
  */
-
-int main(int argc, __attribute__((unused)) char *argv[])
+int main(int argc, char *argv[])
 {
-	int result = 0, i = 1;
+	int i, sum = 0;
 
 	if (argc < 1)
-	{
-		printf("0\n");
 		return (0);
-	}
-	while (i < argc)
+
+	for (i = 1; i < argc; i++)
 	{
 		if (!atoi(argv[i]))
 		{
-			printf("%s\n","Error");
+			printf("%s\n", "Error");
 			return (1);
 		}
-		result += atoi(argv[i]);
-		i++;
+		sum += atoi(argv[i]);
 	}
-	printf("%d\n", result);
+	printf("%d\n", sum);
+
 	return (0);
 }
