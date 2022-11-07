@@ -8,7 +8,8 @@
  */
 int main(int argc, char *argv[])
 {
-	int i, total, cents = 0, num = 0;
+	int i, num = 0;
+	double total, cents = 0;
 	int coins[] = {25, 10, 5, 2, 1};
 
 	/* if not excatly 2 args terminate  */
