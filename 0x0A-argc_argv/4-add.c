@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
+#include <string.h>
 /**
  * main - Entry Point
  * @argc: arguments
@@ -8,17 +10,22 @@
  */
 int main(int argc, char *argv[])
 {
-	int i, sum = 0;
+	int i, j, length, sum = 0;
 
 	if (argc < 1)
 		return (0);
-
+	/* loop through the args */
 	for (i = 1; i < argc; i++)
 	{
-		if (!atoi(argv[i]))
+		length = strlen(argv[i]);
+		/* loop through the argv[i] to detect non-digits */
+		for (j = 0; j < length; j++)
 		{
-			printf("%s\n", "Error");
-			return (1);
+			if (!isdigit(argv[i][j]))
+			{
+				printf("%s\n", "Error");
+				return (1);
+			}
 		}
 		sum += atoi(argv[i]);
 	}
